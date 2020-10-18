@@ -26,7 +26,9 @@ const FileUpload = () => {
                     'Content-Type': 'multipart/form-data'
                 },
                 onUploadProgress: progressEvent => {
-                    setUploadPercentage(parseInt(Math.round((progressEvent.loaded * 100) / progressEvent.total)
+                    setUploadPercentage(
+                        parseInt(
+                            Math.round((progressEvent.loaded * 100) / progressEvent.total)
                     )
                 );
                
@@ -47,7 +49,7 @@ const FileUpload = () => {
                 setMessage(err.response.data.msg);
             }
         }
-    }
+    };
 
     return (
         <Fragment>
@@ -85,4 +87,4 @@ const FileUpload = () => {
     )
 }
 
-export default FileUpload
+export default FileUpload;
